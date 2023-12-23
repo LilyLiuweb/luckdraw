@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽抽樂</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Single+Day&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="luckdraw.css">
+
+
+</head>
+
+<body>
+    <h1>hymn review in 2023</h1>
+    <div class="wrap_container">
+        <div class="wrap" num="406" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C406</div>
+        </div>
+        <div class="wrap" num="408" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C408</div>
+        </div>
+        <div class="wrap" num="416" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C416</div>
+        </div>
+        <div class="wrap" num="420" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C420</div>
+        </div>
+        <div class="wrap" num="425" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C425</div>
+        </div>
+        <div class="wrap" num="433" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C433</div>
+        </div>
+        <div class="wrap" num="436" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C436</div>
+        </div>
+        <div class="wrap" num="437" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C437</div>
+        </div>
+        <div class="wrap" num="443" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C443</div>
+        </div>
+        <div class="wrap" num="447" onclick="getHymnText($(this))">
+            <div class="front">click me</div>
+            <div class="back">C447</div>
+        </div>
+    </div>
+    <div class="model hidden">
+        <a href=""></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var hymnalUrl = "https://www.hymnal.net/en/hymn/ch/";
+
+        function getHymnText(wrap) {
+            let hymnNum = wrap.attr('num');
+            setTimeout(function () {
+                window.open(hymnalUrl + hymnNum, '_blank');
+            }, 3000)
+
+            wrap.addClass('clicked');
+            wrap.off('click'); // 移除點擊事件，以防再次觸發
+        }
+    </script>
+
+</body>
+
+</html>
